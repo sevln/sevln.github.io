@@ -1,207 +1,209 @@
 <html>
-	<style>			
-		#menuBar {background: #a5ba50;
-			position: relative;
-			list-style: none;
-			width: 100%;
-			height: 80 px;
-    			text-align: center;
-			margin: 0;
-			padding: 0;
-		}			
 
-		#menuBar ul {height: auto;
+<!--CONTENT
+	1.0: MAIN PAGE
+	2.0: ABOUT
+	3.0: PROJECTS
+	4.0: CONTACT
+-->
+	
+	<style>
+		/*Reset page and body margins*/
+		body {background: #fafefe;
+			margin: 0;
+			padding:0; 
+		}
+
+		/*General Font Styling*/
+		h1 {font-family: 'Titillium Web';
+			font-size: 50px;
+			font-weight: 200;
+			color: #000000;
+		}
+
+		h2 {font-family: 'Titillium Web';
+			font-size: 20px;
+			color: #000000;
+		}
+		
+		p {font-family: 'Arial Narrow';
+			font-size: 18px;
+			color: #000000;
+		}
+		
+		/*Fixed Header*/
+		#headerContainer {background: #222222;
+			height: 80px;
+			position: fixed;
+			width: 100%;  
+			top:0;
+			left:0;
+			box-shadow: 0 1px 1px #343434;
+		} 
+			 
+		#header {width: 940px;
+			text-align: center; 
+			line-height: 60px;
+			list-style: none; 
+			margin: 0 auto;
+		}
+
+		#header ul {height: auto;
     			padding: 15px 0px;
     			margin: 0px;
 		}
 
-		#menuBar li {font-weight: bold;
+		#header li {font-weight: bold;
 			margin: 0;
-			padding: 10px 10px 0 0;			
+			padding: 10px 30px 0px 30px;			
 			display: inline;
 		}
 
-		#menuBar li a {position: relative;
+		#header li a {position: relative;
 			text-decoration: none;
 			font-family: 'Titillium Web';
     			font-weight: bold;
 			font-size: 18px;
-			color: #ffffff;
+			color: #fafefe;
 			text-align: center;
 			text-transform: uppercase;
-			border-bottom: 2px solid #a5ba50;			
+			border-bottom: 2px solid #222222;			
 			padding: 10px 10px 0 10px;
 			overflow: hidden;
 			display: inline;
 		}
 
-		#menuBar li a:hover {color: #343434;
-			text-shadow:inset 0 0 8px 0 red;
-			border-bottom-color: #ffffff;
-			-moz-transition:all 0.25s ease;
-			-webkit-transition:all 0.25s ease;
-			-o-transition:all 0.25s ease;
-			transition:all 0.25s ease;		
+		/*Content*/
+		#container { border: 1px solid #cccccc; 
+			height: 600px;
+			width: 940px;
+			margin: 0 auto;
+			padding: 80px; 
+			overflow: auto; 
 		}
 
-		#titleBar {background: #343434;
-			width: 100%;
-			height: 150px;
-			padding: 5px 0 20px 0;
-			box-shadow: 0 4px 3px #343434;
+		.section {position: relative;
+			border: 1px solid #cccccc;
+			width: 900px;
 		}
 
-		body {background: #f5f5f5;
-			height: 100%;
+		#introWrapper {position: relative;
+			height: 290px;
 			margin: 0;
 			padding: 0;
+			overflow: hidden;
+			border: 1px solid #cccccc;
 		}
-
-		#wrapper {min-height: 100%;
-			position: relative;
-		}
-
-		#content {margin: 0;
-			padding: 0;
-			padding-bottom: 70px;
-		}
-
-		h1 {font-family: 'Titillium Web';
+		
+		#introWrapper h1 {font-family: 'Titillium Web';
 			font-size: 60px;
-			font-weight: 200;
-			color: white;
-			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 30px;
+			color: #000000;
 		}
 
-		h2 {font-family: 'Titillium Web';
-			font-size: 30px;
-			color: black;
-			text-transform: uppercase;
-		} 		
+		#accentLarge {font-family: 'Titillium Web';
+			font-size: 60px;
+			font-weight: 700;
+			color: #a5ba50;
+		}
 
-		#section {background: #ffffff;
-			width: 100%;
-			height: 500px;
-			margin: 0;
-			padding: 0;
-			box-shadow: 0 4px 5px #eeeeee;
-		}	
-
-		.textContainer {margin: 30px;
+		#accentSmall {font-family: 'Titillium Web';
+			font-size: 16px;
+			font-weight: 400;
+			color: #000000;
 		}
 	
-		.textContainer h1 {font-family:'Titillium Web';
-			color: black;
-		}
-
-		.textContainer p {font-family: 'Arial Narrow';
-			font-size: 18px;
-			font-weight: 550;
-			color: black;
-		}	
-
-		#toolbox {font-family: 'Titillium Web';
-		font-weight: bold;
-		font-size: 30px;
-		color: #a5ba50;
-		text-align: left;
-		padding: 0 30px 0 0;
-		float: right;
-		}
-
-		#toolbox th {font-size: 30px;
-			text-align: center;
-			text-transform: uppercase;
-			color: black;
-		}
-
-		#footer {background: #a5ba50;
+		
+ 
+		/*Fixed Footer*/
+		#footerContainer { background: #222222;
+			height: 60px;
 			width: 100%;
-			height: 70px;
-    			font-family: 'Titillium Web';
-    			font-weight: bold;
-			font-size: 16px;
-			color: white;
-    			text-align: center;
-			text-transform: uppercase;
-			underline: none
-			position: absolute;
-			bottom: 0;
+			position: fixed; 
+			bottom: 0;  
 			left: 0;
-			padding-top: 10px;
-			box-shadow: 0 -25px #343434;
+			box-shadow: 0 -1px 1px #343434;	
 		}
-		
-		#footer a {text-decoration: none;
-			color: white;
+			
+		#footer { width:940px; 
+			text-align:center;
+			line-height:60px;
+			margin:0 auto;	
 		}
-	</style>		
-		
+			
+		#footer a {font-family: 'Titillium Web';
+			font-size: 10px;
+			color: #8f8f8f;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	</style>
+
+	<!--Webpage Title & Font Imports-->
 	<head>
-		<title>Evelyn Sham | Portfolio</title>
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,200' rel='stylesheet' type='text/css'>
+		<title>Evelyn Sham | Portfolio </title>
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700,400,300,200' rel='stylesheet' type='text/css'>
 	</head>
 
+	<!--Page Content-->
 	<body>
-		<div id="wrapper">		
-
-			<div id="menuBar">
-				<a name="Top"></a>
+		<!--START: Fixed Header-->
+		<div id="headerContainer">
+			<div id="header">
 				<ul>
-					<li><a href="#About">About</a></li>
-					<li><a href="#Projects">Projects</a></li>
-					<li><a href="#Contact">Contact</a></li>
-				</ul>		
-			</div>
-
-			<div id="titleBar">
-      				<h1 align="center">Evelyn Sham</h1>
-			</div>
-
-			<div id="content">
-				<div id="section">		
-					<div class="textContainer">
-						<a name="About"></a>  		
-						<h2>About</h2>
-						<p>We're in the works!</p>
-					</div>
-					<table id="toolbox">
-						<tr>
-							<th colspan="2">My Skills</th>
-						</tr>
-						<tr>
-							<td>Java</td>
-							<td>C</td>	
-						</tr>
-						<tr>
-							<td>Photoshop</td>
-							<td>Illustrator</td>
-						</tr>
-						<tr>
-							<td>HTML/CSS</td>
-							<td>SQL</td>
-						</tr>
-					</table>
-				</div>
-				<div id="section">		
-					<div class="textContainer">
-						<a name="Projects"></a>  		
-						<h2>Projects</h2>
-						<p>We're in the works!</p>
-					</div>
-				</div>
-				<div id="section">		
-					<div class="textContainer">
-						<a name="Contact"></a>  		
-						<h2>Contact</h2>
-						<p>We're in the works!</p>
-					</div>
-				</div>
-			</div>
-
-			<div id="footer">
-				<a href="#Top">| Back to Top |</a>		
+					<li><a href="#About">About</a></li
+					><li><a href="#Projects">Projects</a></li
+					><li><a href=#Contact"">Contact</a></li>
+				</ul>			
 			</div>
 		</div>
+		<!--END: Fixed Header-->
+
+		<!--START: Content-->
+		<div id="container">
+
+			<!--Intro Page-->
+			<a name="Top"></a>
+			<div id="introWrapper">
+				<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
+				<span id="accentSmall">Scroll down to continue<br>through my portfolio</span>
+			</div>
+			
+			<!--1.0 About-->
+			<a name="About"></a>
+			<div class="section">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue rhoncus justo, ut pellentesque ex mollis a. Aliquam faucibus eros felis, eu sodales magna rutrum lobortis. Nam blandit, eros eu mollis lobortis, velit velit convallis nulla, quis ultricies elit libero id turpis. Vivamus viverra quam vitae leo condimentum, vel semper massa ultrices. Vestibulum porttitor pellentesque congue. Vivamus eu euismod enim. Nulla leo felis, porttitor at luctus molestie, volutpat in eros. Vestibulum egestas bibendum finibus. Fusce pharetra maximus augue sit amet lacinia. Quisque vitae lorem quis risus sollicitudin laoreet non vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis, quam eu gravida gravida, arcu diam blandit dui, at molestie turpis mi vel nibh. Suspendisse pellentesque lorem id libero scelerisque, venenatis feugiat nisl tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida rutrum magna eu varius. Donec convallis elit at nisi venenatis malesuada.
+
+Sed placerat, mi in ullamcorper vehicula, massa arcu laoreet diam, non mattis eros velit sed orci. Nunc elementum urna a hendrerit ornare. Aliquam in dolor ornare, laoreet metus consequat, pulvinar nisl. Curabitur ac placerat tortor, eget eleifend nunc. Nam ac mauris imperdiet, pretium purus vitae, volutpat turpis. Nam luctus augue pretium, placerat mi a, maximus nulla. Quisque vestibulum odio nibh, eget interdum odio accumsan id. In id elementum odio. Nullam cursus blandit turpis, eu consectetur turpis facilisis in. Vivamus ut feugiat metus. Vivamus mattis eros quis commodo lacinia. In hac habitasse platea dictumst. Mauris dapibus elit quis euismod varius.
+
+Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blandit egestas ligula id porttitor. Aliquam gravida ligula sit amet justo suscipit viverra. Curabitur in neque imperdiet, sollicitudin risus id, efficitur nulla. In blandit cursus mi, a malesuada ante facilisis nec. Suspendisse volutpat, mauris eget blandit ultricies, neque risus accumsan ante, id auctor libero est vitae massa. Integer nisl sapien, sagittis ac semper ut, mollis sit amet leo. Fusce ornare libero eu nisl condimentum lobortis. Cras laoreet erat id lectus feugiat, eget dignissim sem dignissim. Nullam non lectus vitae lorem faucibus posuere. In fermentum placerat tellus, non vulputate mauris laoreet id. Nam ut neque venenatis, gravida nibh et, maximus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus egestas euismod nulla ut aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.
+
+Maecenas tellus purus, tincidunt quis lobortis ac, congue ac tellus. In hac habitasse platea dictumst. Nunc in nulla ac nibh rhoncus viverra. Donec sed congue lectus. Aliquam auctor augue in turpis pretium, eget tempor nisi maximus. Sed non tempus nisl, et malesuada lectus. Mauris in urna non turpis feugiat pellentesque. Proin et neque vel mauris euismod rutrum. Morbi nisi nibh, egestas vel porta vel, elementum quis augue. Cras non orci ut justo lobortis commodo. Cras semper purus non porttitor dictum. Quisque rutrum ultrices urna imperdiet vestibulum. Donec accumsan dolor ac pretium accumsan. Nulla suscipit arcu ut enim pharetra, in consectetur eros semper.
+
+Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.
+			<div>
+
+			<!--2.0 Projects-->
+			<a name="Projects"></a>
+			<div class="section">
+			<div>
+
+			<!--3.0 Contact-->
+			<a name="Contact"></a>
+			<div class="section">
+			<div>
+
+			
+		<div>
+		<!--END: Content-->
+
+		<!--START: Fixed Footer-->
+		<div id="footerContainer">
+			<div id="footer">
+				<a href="#Top">Back to Top<a/>
+			<div>
+		</div>
+		<!--END: Fixed Footer-->
 	</body>
 </html>
