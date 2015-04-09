@@ -39,6 +39,7 @@
 			top:0;
 			left:0;
 			box-shadow: 0 1px 1px #343434;
+			z-index: 2;
 		} 
 			 
 		#header {width: 940px;
@@ -74,16 +75,23 @@
 		}
 
 		/*Content*/
-		#container { border: 1px solid #cccccc; 
+		#container { position: absolute; 
 			height: 600px;
 			width: 940px;
+			text-align: justify;
 			margin: 0 auto;
-			padding: 80px; 
-			overflow: auto; 
+			padding: 80px 80px 80px 225px;
+			left: 0; 
+			overflow-x: hidden;
+			overflow-y: scroll;
+			z-index: 1; 
+		}
+
+		#container::-webkit-scrollbar {
+ 			display: none;
 		}
 
 		.section {position: relative;
-			border: 1px solid #cccccc;
 			width: 900px;
 		}
 
@@ -92,7 +100,6 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-			border: 1px solid #cccccc;
 		}
 		
 		#introWrapper h1 {font-family: 'Titillium Web';
@@ -114,19 +121,18 @@
 			color: #000000;
 		}
 	
-		
- 
 		/*Fixed Footer*/
-		#footerContainer { background: #222222;
+		#footerContainer {background: #222222;
 			height: 60px;
 			width: 100%;
 			position: fixed; 
 			bottom: 0;  
 			left: 0;
-			box-shadow: 0 -1px 1px #343434;	
+			box-shadow: 0 -1px 1px #343434;
+			z-index: 2;	
 		}
 			
-		#footer { width:940px; 
+		#footer {width:940px; 
 			text-align:center;
 			line-height:60px;
 			margin:0 auto;	
@@ -206,4 +212,7 @@ Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habi
 		</div>
 		<!--END: Fixed Footer-->
 	</body>
+</html>->
+	</body>
+</html>
 </html>
