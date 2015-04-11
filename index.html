@@ -15,13 +15,13 @@
 		}
 
 		/*General Font Styling*/
-		h1 {font-family: 'Titillium Web';
+		h1 {font-family: 'Oswald';
 			font-size: 50px;
 			font-weight: 200;
 			color: #000000;
 		}
 
-		h2 {font-family: 'Titillium Web';
+		h2 {font-family: 'Oswald';
 			font-size: 20px;
 			color: #000000;
 		}
@@ -32,14 +32,13 @@
 		}
 		
 		/*Fixed Header*/
-		#headerContainer {background: #222222;
+		#headerContainer {background: #fafefe;
 			height: 80px;
 			position: fixed;
 			width: 100%;  
 			top:0;
 			left:0;
-			box-shadow: 0 1px 1px #343434;
-			z-index: 2;
+			z-index: 2; 
 		} 
 			 
 		#header {width: 940px;
@@ -56,22 +55,31 @@
 
 		#header li {font-weight: bold;
 			margin: 0;
-			padding: 10px 30px 0px 30px;			
+			padding: 10px 10px 0px 10px;			
 			display: inline;
 		}
 
 		#header li a {position: relative;
 			text-decoration: none;
-			font-family: 'Titillium Web';
+			font-family: 'Oswald';
     			font-weight: bold;
-			font-size: 18px;
-			color: #fafefe;
+			font-size: 14px;
+			color: #8f8f8f;
 			text-align: center;
 			text-transform: uppercase;
-			border-bottom: 2px solid #222222;			
+			border-bottom: 2px solid #fafefe;			
 			padding: 10px 10px 0 10px;
 			overflow: hidden;
 			display: inline;
+		}
+
+		#header li a:hover {color: #343434;
+			text-shadow:inset 0 0 8px 0 red;
+			border-bottom-color: #343434;
+			-moz-transition:all 0.25s ease;
+			-webkit-transition:all 0.25s ease;
+			-o-transition:all 0.25s ease;
+			transition:all 0.25s ease;		
 		}
 
 		/*Content*/
@@ -95,40 +103,44 @@
 			width: 900px;
 		}
 
-		#introWrapper {position: relative;
+		#introWrapper {position: absolute;
 			height: 290px;
 			margin: 0;
 			padding: 0;
+			right: 0;
+			bottom: 140px;
 			overflow: hidden;
 		}
 		
-		#introWrapper h1 {font-family: 'Titillium Web';
-			font-size: 60px;
-			font-weight: 700;
-			line-height: 30px;
-			color: #000000;
+		#introWrapper h1, #accentLarge {font-family: 'Oswald';
+			font-size: 70px;
+			font-weight: 400;
+			line-height: 30px;			
 		}
 
-		#accentLarge {font-family: 'Titillium Web';
-			font-size: 60px;
-			font-weight: 700;
+		#introWrapper h1 {color: #000000;
+		}
+
+		#accentLarge {
 			color: #a5ba50;
 		}
 
-		#accentSmall {font-family: 'Titillium Web';
-			font-size: 16px;
+		#accentSmall {position: absolute;
+			font-family: 'Oswald';
+			font-size: 24px;
 			font-weight: 400;
 			color: #000000;
+			right: 50px;
 		}
 	
 		/*Fixed Footer*/
-		#footerContainer {background: #222222;
+		#footerContainer {background: #fafefe;
 			height: 60px;
 			width: 100%;
 			position: fixed; 
 			bottom: 0;  
 			left: 0;
-			box-shadow: 0 -1px 1px #343434;
+			box-shadow: 0 -1px 1px #8f8f8f;
 			z-index: 2;	
 		}
 			
@@ -138,7 +150,7 @@
 			margin:0 auto;	
 		}
 			
-		#footer a {font-family: 'Titillium Web';
+		#footer a {font-family: 'Oswald';
 			font-size: 10px;
 			color: #8f8f8f;
 			text-decoration: none;
@@ -149,7 +161,7 @@
 	<!--Webpage Title & Font Imports-->
 	<head>
 		<title>Evelyn Sham | Portfolio </title>
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700,400,300,200' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:700,400,300' rel='stylesheet' type='text/css'>
 	</head>
 
 	<!--Page Content-->
@@ -173,7 +185,8 @@
 			<a name="Top"></a>
 			<div id="introWrapper">
 				<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
-				<span id="accentSmall">Scroll down to continue<br>through my portfolio</span>
+				<span id="accentSmall">Let me introduce myself.</span>
+				<img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/down3-512.png" alt="arrowDown" width="104" height="142">
 			</div>
 			
 			<!--1.0 About-->
