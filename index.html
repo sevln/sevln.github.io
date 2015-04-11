@@ -42,7 +42,7 @@
 		} 
 			 
 		#header {width: 940px;
-			text-align: center; 
+			text-align: left; 
 			line-height: 60px;
 			list-style: none; 
 			margin: 0 auto;
@@ -53,8 +53,7 @@
     			margin: 0px;
 		}
 
-		#header li {font-weight: bold;
-			margin: 0;
+		#header li {margin: 0;
 			padding: 10px 10px 0px 10px;			
 			display: inline;
 		}
@@ -62,7 +61,7 @@
 		#header li a {position: relative;
 			text-decoration: none;
 			font-family: 'Oswald';
-    			font-weight: bold;
+    			font-weight: 400;
 			font-size: 14px;
 			color: #8f8f8f;
 			text-align: center;
@@ -83,16 +82,16 @@
 		}
 
 		/*Content*/
-		#container { position: absolute; 
+		#container { position: relative; 
 			height: 600px;
 			width: 940px;
 			text-align: justify;
 			margin: 0 auto;
-			padding: 80px 80px 80px 225px;
+			padding: 80px;
 			left: 0; 
 			overflow-x: hidden;
 			overflow-y: scroll;
-			z-index: 1; 
+			z-index: 1;
 		}
 
 		#container::-webkit-scrollbar {
@@ -100,29 +99,39 @@
 		}
 
 		.section {position: relative;
-			width: 900px;
+			width: 940px;
+			margin-top: 125px;
+			padding-top: 75px;
+			border: 1px solid #cccccc;
 		}
 
-		#introWrapper {position: absolute;
-			height: 290px;
+		#introWrapper {position: relative;
+			height: 500px;
+			width: 940px;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		#intro {position: absolute;
+			height: 300px;
 			margin: 0;
 			padding: 0;
 			right: 0;
-			bottom: 140px;
+			bottom: 0;
 			overflow: hidden;
 		}
 		
-		#introWrapper h1, #accentLarge {font-family: 'Oswald';
+		#intro h1, #accentLarge {font-family: 'Oswald';
 			font-size: 70px;
 			font-weight: 400;
 			line-height: 30px;			
 		}
 
-		#introWrapper h1 {color: #000000;
+		#intro h1 {color: #000000;
 		}
 
-		#accentLarge {
-			color: #a5ba50;
+		#accentLarge {color: #a5ba50;
 		}
 
 		#accentSmall {position: absolute;
@@ -130,7 +139,14 @@
 			font-size: 24px;
 			font-weight: 400;
 			color: #000000;
-			right: 50px;
+			right: 100px;
+		}
+
+		#arrowDown {position: absolute;
+			height: 70; 			
+			width: 50;
+			right: 0;
+			bottom: 75px;
 		}
 	
 		/*Fixed Footer*/
@@ -149,12 +165,30 @@
 			line-height:60px;
 			margin:0 auto;	
 		}
-			
-		#footer a {font-family: 'Oswald';
-			font-size: 10px;
-			color: #8f8f8f;
+		
+		#footer p, #footer a {font-family: 'Oswald';
+			font-size: 14px;
 			text-decoration: none;
 			text-transform: uppercase;
+			margin: 0 30px 0 30px;
+			padding: 0 10px 0 10px;
+			display: inline;
+		}
+
+		#footer p {color: #343434;
+			font-weight: 400;
+		}
+
+		#footer a {color: #8f8f8f;
+			font-weight: 300;
+		}
+
+		#footer a:hover {color: #343434;
+			text-shadow:inset 0 0 8px 0 red;
+			-moz-transition:all 0.25s ease;
+			-webkit-transition:all 0.25s ease;
+			-o-transition:all 0.25s ease;
+			transition:all 0.25s ease;		
 		}
 	</style>
 
@@ -169,10 +203,11 @@
 		<!--START: Fixed Header-->
 		<div id="headerContainer">
 			<div id="header">
+				
 				<ul>
-					<li><a href="#About">About</a></li
-					><li><a href="#Projects">Projects</a></li
-					><li><a href=#Contact"">Contact</a></li>
+					<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="24px" width="24px"></a></li
+					><li><a href="#About">About</a></li
+					><li><a href="#Projects">Projects</a></li>
 				</ul>			
 			</div>
 		</div>
@@ -180,19 +215,21 @@
 
 		<!--START: Content-->
 		<div id="container">
-
 			<!--Intro Page-->
-			<a name="Top"></a>
-			<div id="introWrapper">
-				<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
-				<span id="accentSmall">Let me introduce myself.</span>
-				<img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/down3-512.png" alt="arrowDown" width="104" height="142">
-			</div>
+			<a name="Top">
+				<div id="introWrapper">
+					<div id="intro">
+						<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
+						<span id="accentSmall">Allow me to introduce myself</span>
+						<a href="#About"><img id="arrowDown" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+					</div>
+				</div>
+			</a>
 			
 			<!--1.0 About-->
-			<a name="About"></a>
-			<div class="section">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue rhoncus justo, ut pellentesque ex mollis a. Aliquam faucibus eros felis, eu sodales magna rutrum lobortis. Nam blandit, eros eu mollis lobortis, velit velit convallis nulla, quis ultricies elit libero id turpis. Vivamus viverra quam vitae leo condimentum, vel semper massa ultrices. Vestibulum porttitor pellentesque congue. Vivamus eu euismod enim. Nulla leo felis, porttitor at luctus molestie, volutpat in eros. Vestibulum egestas bibendum finibus. Fusce pharetra maximus augue sit amet lacinia. Quisque vitae lorem quis risus sollicitudin laoreet non vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis, quam eu gravida gravida, arcu diam blandit dui, at molestie turpis mi vel nibh. Suspendisse pellentesque lorem id libero scelerisque, venenatis feugiat nisl tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida rutrum magna eu varius. Donec convallis elit at nisi venenatis malesuada.
+			<a name="About">
+				<div class="section">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue rhoncus justo, ut pellentesque ex mollis a. Aliquam faucibus eros felis, eu sodales magna rutrum lobortis. Nam blandit, eros eu mollis lobortis, velit velit convallis nulla, quis ultricies elit libero id turpis. Vivamus viverra quam vitae leo condimentum, vel semper massa ultrices. Vestibulum porttitor pellentesque congue. Vivamus eu euismod enim. Nulla leo felis, porttitor at luctus molestie, volutpat in eros. Vestibulum egestas bibendum finibus. Fusce pharetra maximus augue sit amet lacinia. Quisque vitae lorem quis risus sollicitudin laoreet non vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis, quam eu gravida gravida, arcu diam blandit dui, at molestie turpis mi vel nibh. Suspendisse pellentesque lorem id libero scelerisque, venenatis feugiat nisl tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida rutrum magna eu varius. Donec convallis elit at nisi venenatis malesuada.
 
 Sed placerat, mi in ullamcorper vehicula, massa arcu laoreet diam, non mattis eros velit sed orci. Nunc elementum urna a hendrerit ornare. Aliquam in dolor ornare, laoreet metus consequat, pulvinar nisl. Curabitur ac placerat tortor, eget eleifend nunc. Nam ac mauris imperdiet, pretium purus vitae, volutpat turpis. Nam luctus augue pretium, placerat mi a, maximus nulla. Quisque vestibulum odio nibh, eget interdum odio accumsan id. In id elementum odio. Nullam cursus blandit turpis, eu consectetur turpis facilisis in. Vivamus ut feugiat metus. Vivamus mattis eros quis commodo lacinia. In hac habitasse platea dictumst. Mauris dapibus elit quis euismod varius.
 
@@ -200,32 +237,31 @@ Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blan
 
 Maecenas tellus purus, tincidunt quis lobortis ac, congue ac tellus. In hac habitasse platea dictumst. Nunc in nulla ac nibh rhoncus viverra. Donec sed congue lectus. Aliquam auctor augue in turpis pretium, eget tempor nisi maximus. Sed non tempus nisl, et malesuada lectus. Mauris in urna non turpis feugiat pellentesque. Proin et neque vel mauris euismod rutrum. Morbi nisi nibh, egestas vel porta vel, elementum quis augue. Cras non orci ut justo lobortis commodo. Cras semper purus non porttitor dictum. Quisque rutrum ultrices urna imperdiet vestibulum. Donec accumsan dolor ac pretium accumsan. Nulla suscipit arcu ut enim pharetra, in consectetur eros semper.
 
-Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.
-			<div>
-
+Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.</p>
+				</div>
+			</a>
+	
 			<!--2.0 Projects-->
-			<a name="Projects"></a>
-			<div class="section">
-			<div>
+			<a name="Projects">
+				<div class="section">
+					<p>
+Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.
 
-			<!--3.0 Contact-->
-			<a name="Contact"></a>
-			<div class="section">
-			<div>
+Maecenas tellus purus, tincidunt quis lobortis ac, congue ac tellus. In hac habitasse platea dictumst. Nunc in nulla ac nibh rhoncus viverra. Donec sed congue lectus. Aliquam auctor augue in turpis pretium, eget tempor nisi maximus. Sed non tempus nisl, et malesuada lectus. Mauris in urna non turpis feugiat pellentesque. Proin et neque vel mauris euismod rutrum. Morbi nisi nibh, egestas vel porta vel, elementum quis augue. Cras non orci ut justo lobortis commodo. Cras semper purus non porttitor dictum. Quisque rutrum ultrices urna imperdiet vestibulum. Donec accumsan dolor ac pretium accumsan. Nulla suscipit arcu ut enim pharetra, in consectetur eros semper.
 
-			
-		<div>
+Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blandit egestas ligula id porttitor. Aliquam gravida ligula sit amet justo suscipit viverra. Curabitur in neque imperdiet, sollicitudin risus id, efficitur nulla. In blandit cursus mi, a malesuada ante facilisis nec. Suspendisse volutpat, mauris eget blandit ultricies, neque risus accumsan ante, id auctor libero est vitae massa. Integer nisl sapien, sagittis ac semper ut, mollis sit amet leo. Fusce ornare libero eu nisl condimentum lobortis. Cras laoreet erat id lectus feugiat, eget dignissim sem dignissim. Nullam non lectus vitae lorem faucibus posuere. In fermentum placerat tellus, non vulputate mauris laoreet id. Nam ut neque venenatis, gravida nibh et, maximus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus egestas euismod nulla ut aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.</p>
+				</div>
+			</a>
 		<!--END: Content-->
 
 		<!--START: Fixed Footer-->
 		<div id="footerContainer">
 			<div id="footer">
-				<a href="#Top">Back to Top<a/>
-			<div>
+				<p>Let's Connect!</p>
+				<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px">     LINKEDIN</a>
+				<a href="http://www.github.com/sevln" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="12px" width="12px">     GITHUB</a>	
+			</div>
 		</div>
 		<!--END: Fixed Footer-->
 	</body>
-</html>->
-	</body>
-</html>
 </html>
