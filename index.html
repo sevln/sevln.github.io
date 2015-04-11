@@ -148,6 +148,20 @@
 			right: 0;
 			bottom: 75px;
 		}
+
+		/*Vertical Pan Animation for arrowDown*/
+		.vertpan img {
+  			margin-bottom: 5px;
+  			-webkit-transition: margin 1s ease;
+     			-moz-transition: margin 1s ease;
+       			-o-transition: margin 1s ease;
+      			-ms-transition: margin 1s ease;
+          		transition: margin 1s ease;
+		}
+ 
+		.vertpan img:hover {
+  			margin-bottom: -25px;
+		}
 	
 		/*Fixed Footer*/
 		#footerContainer {background: #fafefe;
@@ -221,7 +235,7 @@
 					<div id="intro">
 						<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
 						<span id="accentSmall">Allow me to introduce myself</span>
-						<a href="#About"><img id="arrowDown" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+						<a href="#About" class="vertpan"><img id="arrowDown" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
 					</div>
 				</div>
 			</a>
@@ -264,4 +278,4 @@ Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blan
 		</div>
 		<!--END: Fixed Footer-->
 	</body>
-</html>
+</html>>
