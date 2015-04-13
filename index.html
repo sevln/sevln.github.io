@@ -15,18 +15,26 @@
 		}
 
 		/*General Font Styling*/
-		h1 {font-family: 'Oswald';
-			font-size: 50px;
-			font-weight: 200;
+
+		h1, h2, h3 {font-family: Oswald;
 			color: #000000;
+		}
+	
+		h1 {font-size: 50px;
+			font-weight: 300;
 		}
 
-		h2 {font-family: 'Oswald';
-			font-size: 20px;
-			color: #000000;
+		h2 {font-size: 30px;
+			font-weight: 400;
+			line-height: 2px;
 		}
 		
-		p {font-family: 'Arial Narrow';
+		h3 {font-size: 20px;
+			font-weight: 300;
+			line-height: 16px;
+		}
+		
+		p {font-family: Open Sans Condensed;
 			font-size: 18px;
 			color: #000000;
 		}
@@ -102,7 +110,7 @@
 			width: 940px;
 			margin-top: 125px;
 			padding-top: 75px;
-			border: 1px solid #cccccc;
+			/*border: 1px solid #cccccc;*/
 		}
 
 		#introWrapper {position: relative;
@@ -122,7 +130,7 @@
 			overflow: hidden;
 		}
 		
-		#intro h1, #accentLarge {font-family: 'Oswald';
+		#intro h1, #accentLarge {font-family: Oswald;
 			font-size: 70px;
 			font-weight: 400;
 			line-height: 30px;			
@@ -135,14 +143,14 @@
 		}
 
 		#accentSmall {position: absolute;
-			font-family: 'Oswald';
+			font-family: Oswald;
 			font-size: 24px;
 			font-weight: 400;
 			color: #000000;
 			right: 100px;
 		}
 
-		#arrowDown {position: absolute;
+		#arrowDown1 {position: absolute;
 			height: 70; 			
 			width: 50;
 			right: 0;
@@ -163,9 +171,55 @@
   			margin-bottom: -25px;
 		}
 	
+		/*For inline display of bio info*/
+		.bio {font-family: Open Sans Condensed;
+			font-size: 20px;
+			font-weight: 300;
+			color: #000000;
+			text-align: justify;
+			margin-left: 1em;
+		}
+
+		#toolbox {position: relative;
+			height: 125px;
+			width: 940px;
+			text-align: center;
+			border-top: 2px solid #f6f6f6;
+			padding: 5px 0 10px 0;
+		}
+
+		.skill {background: #a5ba50;
+			height: 30px; 
+    			width: 150px;
+			font-family: Open Sans Condensed;
+			font-size: 20px;
+			font-weight: 400;
+			color: #fafefe;
+			text-align: center;
+			border-radius: 50px;
+			margin: 10px;
+			display: inline-block;
+		}
+
+		#comment {position: absolute;
+			font-family: Oswald;
+			font-size: 12px;
+			font-weight: 400;
+			color: #000000;
+			right: 75px;
+			bottom: -70px;
+		}
+
+		#arrowDown2 {position: absolute;
+			height: 70; 			
+			width: 50;
+			right: 0;
+			bottom: -100px;
+		}
+
 		/*Fixed Footer*/
 		#footerContainer {background: #fafefe;
-			height: 60px;
+			height: 72px;
 			width: 100%;
 			position: fixed; 
 			bottom: 0;  
@@ -177,10 +231,11 @@
 		#footer {width:940px; 
 			text-align:center;
 			line-height:60px;
-			margin:0 auto;	
+			margin:0 auto;
+			padding: 0;	
 		}
 		
-		#footer p, #footer a {font-family: 'Oswald';
+		#footer p, #footer a {font-family: Oswald;
 			font-size: 14px;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -204,12 +259,22 @@
 			-o-transition:all 0.25s ease;
 			transition:all 0.25s ease;		
 		}
+		
+		#byline {position: absolute;
+			font-family: Open Sans Condensed;
+			font-size: 10px;
+			color: #343434;
+			text-align: center;
+			line-height: 18px;
+			bottom: 0;
+			right: 5px;
+		}
 	</style>
 
 	<!--Webpage Title & Font Imports-->
 	<head>
-		<title>Evelyn Sham | Portfolio </title>
-		<link href='http://fonts.googleapis.com/css?family=Oswald:700,400,300' rel='stylesheet' type='text/css'>
+		<title>Evelyn Sham | Portfolio</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald:400,300,700' rel='stylesheet' type='text/css'	
 	</head>
 
 	<!--Page Content-->
@@ -235,7 +300,7 @@
 					<div id="intro">
 						<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
 						<span id="accentSmall">Allow me to introduce myself</span>
-						<a href="#About" class="vertpan"><img id="arrowDown" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+						<a href="#About" class="vertpan"><img id="arrowDown1" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
 					</div>
 				</div>
 			</a>
@@ -243,21 +308,29 @@
 			<!--1.0 About-->
 			<a name="About">
 				<div class="section">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue rhoncus justo, ut pellentesque ex mollis a. Aliquam faucibus eros felis, eu sodales magna rutrum lobortis. Nam blandit, eros eu mollis lobortis, velit velit convallis nulla, quis ultricies elit libero id turpis. Vivamus viverra quam vitae leo condimentum, vel semper massa ultrices. Vestibulum porttitor pellentesque congue. Vivamus eu euismod enim. Nulla leo felis, porttitor at luctus molestie, volutpat in eros. Vestibulum egestas bibendum finibus. Fusce pharetra maximus augue sit amet lacinia. Quisque vitae lorem quis risus sollicitudin laoreet non vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis, quam eu gravida gravida, arcu diam blandit dui, at molestie turpis mi vel nibh. Suspendisse pellentesque lorem id libero scelerisque, venenatis feugiat nisl tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida rutrum magna eu varius. Donec convallis elit at nisi venenatis malesuada.
-
-Sed placerat, mi in ullamcorper vehicula, massa arcu laoreet diam, non mattis eros velit sed orci. Nunc elementum urna a hendrerit ornare. Aliquam in dolor ornare, laoreet metus consequat, pulvinar nisl. Curabitur ac placerat tortor, eget eleifend nunc. Nam ac mauris imperdiet, pretium purus vitae, volutpat turpis. Nam luctus augue pretium, placerat mi a, maximus nulla. Quisque vestibulum odio nibh, eget interdum odio accumsan id. In id elementum odio. Nullam cursus blandit turpis, eu consectetur turpis facilisis in. Vivamus ut feugiat metus. Vivamus mattis eros quis commodo lacinia. In hac habitasse platea dictumst. Mauris dapibus elit quis euismod varius.
-
-Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blandit egestas ligula id porttitor. Aliquam gravida ligula sit amet justo suscipit viverra. Curabitur in neque imperdiet, sollicitudin risus id, efficitur nulla. In blandit cursus mi, a malesuada ante facilisis nec. Suspendisse volutpat, mauris eget blandit ultricies, neque risus accumsan ante, id auctor libero est vitae massa. Integer nisl sapien, sagittis ac semper ut, mollis sit amet leo. Fusce ornare libero eu nisl condimentum lobortis. Cras laoreet erat id lectus feugiat, eget dignissim sem dignissim. Nullam non lectus vitae lorem faucibus posuere. In fermentum placerat tellus, non vulputate mauris laoreet id. Nam ut neque venenatis, gravida nibh et, maximus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus egestas euismod nulla ut aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.
-
-Maecenas tellus purus, tincidunt quis lobortis ac, congue ac tellus. In hac habitasse platea dictumst. Nunc in nulla ac nibh rhoncus viverra. Donec sed congue lectus. Aliquam auctor augue in turpis pretium, eget tempor nisi maximus. Sed non tempus nisl, et malesuada lectus. Mauris in urna non turpis feugiat pellentesque. Proin et neque vel mauris euismod rutrum. Morbi nisi nibh, egestas vel porta vel, elementum quis augue. Cras non orci ut justo lobortis commodo. Cras semper purus non porttitor dictum. Quisque rutrum ultrices urna imperdiet vestibulum. Donec accumsan dolor ac pretium accumsan. Nulla suscipit arcu ut enim pharetra, in consectetur eros semper.
-
-Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.</p>
+					<h2>BIO</h2>
+					</br>
+					<h3>NAME: <span class="bio">Evelyn Sham</span></h3>
+					<h3>EDUCATION: <span class="bio">BASc. in Industrial Engineering (3rd Year) with Bioengineering minor, University of Toronto</span></h3>
+					<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
+					<div id="toolbox">
+						<h3>TECHNICAL SKILLS</h3>
+						<div class="skill">Java</div>
+						<div class="skill">HTML/CSS</div>		
+						<div class="skill">SQL</div>						
+						<div class="skill">Photoshop</div>
+						<div class="skill">MatLab</div>
+					</div>
+					<span id="comment">Take a look at what</br>I've been working on</span>
+					<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
 				</div>
 			</a>
 	
 			<!--2.0 Projects-->
 			<a name="Projects">
 				<div class="section">
+					<h2>PROJECTS</h2>
+					</br>
 					<p>
 Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.
 
@@ -271,11 +344,12 @@ Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blan
 		<!--START: Fixed Footer-->
 		<div id="footerContainer">
 			<div id="footer">
-				<p>Let's Connect!</p>
+				<p>CONTACT ME:</p>
 				<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px">     LINKEDIN</a>
-				<a href="http://www.github.com/sevln" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="12px" width="12px">     GITHUB</a>	
+				<a href="http://www.github.com/sevln" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="12px" width="12px">     GITHUB</a>
+				<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>	
 			</div>
 		</div>
 		<!--END: Fixed Footer-->
 	</body>
-</html>>
+</html>
