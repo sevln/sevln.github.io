@@ -39,7 +39,7 @@
 			color: #000000;
 		}
 		
-		/*Fixed Header*/
+		/*FIXED HEADER*/
 		#headerContainer {background: #fafefe;
 			height: 80px;
 			position: fixed;
@@ -89,30 +89,42 @@
 			transition:all 0.25s ease;		
 		}
 
-		/*Content*/
+		/*GENERAL CONTENT SECTION FORMATTING*/		
+		#outerWrapper {position: relative;
+			background: #fafefe;
+			margin: 0 auto;
+			padding: 0;
+			overflow: hidden;
+			z-index: 2;
+			border: 1px solid #cccccc;
+		}
+
 		#container { position: relative; 
 			height: 600px;
 			width: 940px;
 			text-align: justify;
 			margin: 0 auto;
 			padding: 80px;
-			left: 0; 
+			padding-left: 15.5%;
+			padding-right: 20%;
 			overflow-x: hidden;
-			overflow-y: scroll;
+			overflow-y: auto;
 			z-index: 1;
+			border: 1px solid #cccccc;
 		}
 
-		#container::-webkit-scrollbar {
+		/*WEBKIT BROWSER - Hide scrollbar*/
+		/*#container::-webkit-scrollbar {
  			display: none;
-		}
+		}*/
 
 		.section {position: relative;
 			width: 940px;
 			margin-top: 125px;
 			padding-top: 90px;
-			/*border: 1px solid #cccccc;*/
 		}
 
+		/*LANDING SECTION*/
 		#introWrapper {position: relative;
 			height: 500px;
 			width: 940px;
@@ -157,21 +169,20 @@
 			bottom: 75px;
 		}
 
-		/*Vertical Pan Animation for arrowDown*/
-		.vertpan img {
-  			margin-bottom: 5px;
+		/*ARROW ANIMATION*/
+		.vertpan img {margin-bottom: 5px;
   			-webkit-transition: margin 1s ease;
-     			-moz-transition: margin 1s ease;
-       			-o-transition: margin 1s ease;
-      			-ms-transition: margin 1s ease;
-          		transition: margin 1s ease;
+     		-moz-transition: margin 1s ease;
+       		-o-transition: margin 1s ease;
+      		-ms-transition: margin 1s ease;
+          	transition: margin 1s ease;
 		}
  
 		.vertpan img:hover {
   			margin-bottom: -25px;
 		}
 	
-		/*For inline display of bio info*/
+		/*ABOUT/BIO SECTION*/
 		.bio {font-family: Open Sans Condensed;
 			font-size: 20px;
 			font-weight: 300;
@@ -190,7 +201,7 @@
 
 		.skill {background: #a5ba50;
 			height: 30px; 
-    			width: 150px;
+    		width: 150px;
 			font-family: Open Sans Condensed;
 			font-size: 20px;
 			font-weight: 400;
@@ -206,18 +217,42 @@
 			font-size: 12px;
 			font-weight: 400;
 			color: #000000;
-			right: 75px;
-			bottom: -70px;
+			right: 5em;
+			bottom: -50px;
 		}
 
 		#arrowDown2 {position: absolute;
 			height: 70; 			
 			width: 50;
 			right: 0;
-			bottom: -100px;
+			bottom: -80px;
 		}
 
-		/*Fixed Footer*/
+		/* PROJECTS SECTION*/
+		#projectContainer {;height: 350px;
+			width: 940;
+			font-family: Oswald;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			padding-bottom: 25px;
+			margin: 0;
+			border: 1px solid #cccccc;
+		}
+
+		.project {background: #a5ba50;
+			height: 350px; 
+    		width: 250px;
+			font-family: Open Sans Condensed;
+			font-size: 20px;
+			font-weight: 400;
+			color: #fafefe;
+			text-align: center;
+			padding: 1em;
+			margin: 0 0.25em 0 0.25em;
+			display: inline-block;
+		}
+
+		/*FIXED FOOTER*/
 		#footerContainer {background: #fafefe;
 			height: 72px;
 			width: 100%;
@@ -279,20 +314,19 @@
 
 	<!--Page Content-->
 	<body>
-		<!--START: Fixed Header-->
-		<div id="headerContainer">
-			<div id="header">
-				
-				<ul>
-					<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="24px" width="24px"></a></li
-					><li><a href="#About">About</a></li
-					><li><a href="#Projects">Projects</a></li>
-				</ul>			
-			</div>
+	<!--START: Fixed Header-->
+	<div id="headerContainer">
+		<div id="header">
+			<ul>
+				<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="24px" width="24px"></a></li
+				><li><a href="#About">About</a></li
+				><li><a href="#Projects">Projects</a></li>
+			</ul>			
 		</div>
-		<!--END: Fixed Header-->
+	</div>
+	<!--END: Fixed Header-->
 
-		<!--START: Content-->
+	<!--START: Content-->	
 		<div id="container">
 			<!--Intro Page-->
 			<a name="Top">
@@ -304,7 +338,7 @@
 					</div>
 				</div>
 			</a>
-			
+		
 			<!--1.0 About-->
 			<a name="About">
 				<div class="section">
@@ -315,30 +349,34 @@
 					<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
 					<div id="toolbox">
 						<h3>TECHNICAL SKILLS</h3>
-						<div class="skill">Java</div>
-						<div class="skill">HTML/CSS</div>		
-						<div class="skill">SQL</div>						
-						<div class="skill">Photoshop</div>
-						<div class="skill">MatLab</div>
+						<span class="skill">Java</span>
+						<span class="skill">HTML/CSS</span>		
+						<span class="skill">SQL</span>						
+						<span class="skill">Photoshop</span>
+						<span class="skill">MatLab</span>
 					</div>
 					<span id="comment">Take a look at what</br>I've been working on</span>
 					<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
 				</div>
 			</a>
-	
+
 			<!--2.0 Projects-->
 			<a name="Projects">
 				<div class="section">
 					<h2>PROJECTS</h2>
 					</br>
-					<p>
-Vivamus et neque pretium, iaculis justo quis, malesuada ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras fringilla placerat urna. Cras tempor pretium elit nec sodales. Mauris erat velit, tristique non turpis in, laoreet vehicula elit. Maecenas ornare nulla lacus. Curabitur et fringilla purus, sit amet lacinia nulla. Duis neque leo, pellentesque vel velit eget, cursus consectetur nunc. Nunc eget leo volutpat, laoreet quam vitae, laoreet est. Cras ac iaculis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam congue sagittis malesuada. Ut posuere nisl a sem pretium, et pellentesque ex sodales. Mauris libero quam, interdum vitae scelerisque in, gravida ac tellus.
-
-Maecenas tellus purus, tincidunt quis lobortis ac, congue ac tellus. In hac habitasse platea dictumst. Nunc in nulla ac nibh rhoncus viverra. Donec sed congue lectus. Aliquam auctor augue in turpis pretium, eget tempor nisi maximus. Sed non tempus nisl, et malesuada lectus. Mauris in urna non turpis feugiat pellentesque. Proin et neque vel mauris euismod rutrum. Morbi nisi nibh, egestas vel porta vel, elementum quis augue. Cras non orci ut justo lobortis commodo. Cras semper purus non porttitor dictum. Quisque rutrum ultrices urna imperdiet vestibulum. Donec accumsan dolor ac pretium accumsan. Nulla suscipit arcu ut enim pharetra, in consectetur eros semper.
-
-Morbi aliquet lobortis ante, eleifend rutrum ligula efficitur et. Curabitur blandit egestas ligula id porttitor. Aliquam gravida ligula sit amet justo suscipit viverra. Curabitur in neque imperdiet, sollicitudin risus id, efficitur nulla. In blandit cursus mi, a malesuada ante facilisis nec. Suspendisse volutpat, mauris eget blandit ultricies, neque risus accumsan ante, id auctor libero est vitae massa. Integer nisl sapien, sagittis ac semper ut, mollis sit amet leo. Fusce ornare libero eu nisl condimentum lobortis. Cras laoreet erat id lectus feugiat, eget dignissim sem dignissim. Nullam non lectus vitae lorem faucibus posuere. In fermentum placerat tellus, non vulputate mauris laoreet id. Nam ut neque venenatis, gravida nibh et, maximus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus egestas euismod nulla ut aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.</p>
+					<div id="projectContainer">
+						<span class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</span
+						><span class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</span
+						><span class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</span>
+						<span class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic Programming Solver</span
+						><span class="project" alt="MIE240 Course Deliverable: Ontario Renal Health Network Website Redesign">Ontario Renal Health Network Website Redesign</span>
+					</div>
+					</br>
+					</br>
 				</div>
 			</a>
+		</div>		
 		<!--END: Content-->
 
 		<!--START: Fixed Footer-->
