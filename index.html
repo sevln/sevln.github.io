@@ -229,17 +229,38 @@
 		}
 
 		/* PROJECTS SECTION*/
-		#projectContainer {;height: 350px;
+		#projectContainer {height: 300px;
 			width: 940;
 			font-family: Oswald;
 			overflow-x: scroll;
 			overflow-y: hidden;
-			padding-bottom: 25px;
-			margin: 0;
-			border: 1px solid #cccccc;
+			margin-right: 10px;
+			white-space: nowrap;
 		}
 
-		.project {background: #a5ba50;
+		.project {position: relative;
+			background: #a5ba50;
+			height: 290px; 
+    		width: 250px;
+			font-family: Open Sans Condensed;
+			font-size: 20px;
+			font-weight: 400;
+			color: #fafefe;
+			text-align: center;
+			outline: 2px solid transparent;
+			padding: 1em;
+			margin: 0 0.1em 0 0.1em;
+			display: inline-block;
+		}
+
+		.project:hover {outline: 2px solid #343434;
+			-moz-transition:all 0.25s ease;
+			-webkit-transition:all 0.25s ease;
+			-o-transition:all 0.25s ease;
+			transition:all 0.25s ease;		
+		}
+
+		.projDescription {position: absolute;
 			height: 350px; 
     		width: 250px;
 			font-family: Open Sans Condensed;
@@ -248,7 +269,7 @@
 			color: #fafefe;
 			text-align: center;
 			padding: 1em;
-			margin: 0 0.25em 0 0.25em;
+			margin: 0 0.1em 0 0.1em;
 			display: inline-block;
 		}
 
@@ -365,12 +386,13 @@
 				<div class="section">
 					<h2>PROJECTS</h2>
 					</br>
+					<p>Click on a project to visit its project page:</p>
 					<div id="projectContainer">
-						<span class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</span
-						><span class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</span
-						><span class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</span>
-						<span class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic Programming Solver</span
-						><span class="project" alt="MIE240 Course Deliverable: Ontario Renal Health Network Website Redesign">Ontario Renal Health Network Website Redesign</span>
+						<a href="https://github.com/timmui/PhantPower"><div class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</div></a>
+						<a href=""><div class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</div></a>
+						<a href="https://github.com/MIE350-Project/MIE350"><div class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</div></a>
+						<a href="https://github.com/sevln/MIE335"><div class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic Programming Solver</div></a>
+						<a href=""><div class="project" alt="MIE240 Course Deliverable: Ontario Renal Network Website Redesign">ORN Website Redesign</div></a>
 					</div>
 					</br>
 					</br>
