@@ -40,7 +40,7 @@
 		}
 		
 		/*FIXED HEADER*/
-		#headerContainer {background: #fafefe;
+		headerContainer {background: #fafefe;
 			height: 80px;
 			position: fixed;
 			width: 100%;  
@@ -49,24 +49,24 @@
 			z-index: 2; 
 		} 
 			 
-		#header {width: 940px;
+		header {width: 940px;
 			text-align: left; 
 			line-height: 60px;
 			list-style: none; 
 			margin: 0 auto;
 		}
 
-		#header ul {height: auto;
+		header ul {height: auto;
     			padding: 15px 0px;
     			margin: 0px;
 		}
 
-		#header li {margin: 0;
+		header li {margin: 0;
 			padding: 10px 10px 0px 10px;			
 			display: inline;
 		}
 
-		#header li a {position: relative;
+		header li a {position: relative;
 			text-decoration: none;
 			font-family: 'Oswald';
     		font-weight: 400;
@@ -80,7 +80,7 @@
 			display: inline;
 		}
 
-		#header li a:hover {color: #343434;
+		header li a:hover {color: #343434;
 			text-shadow:inset 0 0 8px 0 red;
 			border-bottom-color: #343434;
 			-moz-transition:all 0.25s ease;
@@ -90,7 +90,7 @@
 		}
 
 		/*GENERAL CONTENT SECTION FORMATTING*/		
-		#outerWrapper {position: relative;
+		outerWrapper {position: relative;
 			background: #fafefe;
 			margin: 0 auto;
 			padding: 0;
@@ -274,7 +274,7 @@
 		}
 
 		/*FIXED FOOTER*/
-		#footerContainer {background: #fafefe;
+		footerContainer {background: #fafefe;
 			height: 72px;
 			width: 100%;
 			position: fixed; 
@@ -284,14 +284,14 @@
 			z-index: 2;	
 		}
 			
-		#footer {width:940px; 
+		footer {width:940px; 
 			text-align:center;
 			line-height:60px;
 			margin:0 auto;
 			padding: 0;	
 		}
 		
-		#footer p, #footer a {font-family: Oswald;
+		footer p, footer a {font-family: Oswald;
 			font-size: 14px;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -300,15 +300,15 @@
 			display: inline;
 		}
 
-		#footer p {color: #343434;
+		footer p {color: #343434;
 			font-weight: 400;
 		}
 
-		#footer a {color: #8f8f8f;
+		footer a {color: #8f8f8f;
 			font-weight: 300;
 		}
 
-		#footer a:hover {color: #343434;
+		footer a:hover {color: #343434;
 			text-shadow:inset 0 0 8px 0 red;
 			-moz-transition:all 0.25s ease;
 			-webkit-transition:all 0.25s ease;
@@ -333,29 +333,21 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 		
 		<!--GOOGLE ANALYTICS-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-62285112-1', 'auto');
-		  ga('send', 'pageview');
-		</script>	
+		<script src="script.js"></script>	
 	</head>
 
 	<!--Page Content-->
 	<body>
 	<!--START: Fixed Header-->
-	<div id="headerContainer">
-		<div id="header">
+	<headerContainer>
+		<header>
 			<ul>
 				<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="24px" width="24px"></a></li
 				><li><a href="#About">About</a></li
 				><li><a href="#Projects">Projects</a></li>
 			</ul>			
-		</div>
-	</div>
+		</header>
+	</headerContainer>
 	<!--END: Fixed Header-->
 
 	<!--START: Content-->	
@@ -413,14 +405,14 @@
 		<!--END: Content-->
 
 		<!--START: Fixed Footer-->
-		<div id="footerContainer">
-			<div id="footer">
+		<footerContainer>
+			<footer>
 				<p>CONTACT ME:</p>
 				<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px">     LINKEDIN</a>
 				<a href="http://www.github.com/sevln" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="12px" width="12px">     GITHUB</a>
 				<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>	
-			</div>
-		</div>
+			</footer>
+		</footerContainer>
 		<!--END: Fixed Footer-->
 	</body>
 </html>
