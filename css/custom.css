@@ -1,0 +1,367 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: Oswald;
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+
+/*GENERAL FONT STYLING*/
+h1, h2, h3 {
+	font-family: Oswald;
+	color: #000000;
+}	
+h1 {
+	font-size: 50px;
+	font-weight: 300;
+}
+h2 {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 2px;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 16px;
+}
+p {
+	font-family: Open Sans Condensed;
+	font-size: 18px;
+	color: #000000;
+}
+
+/*FIXED NAVBAR*/
+.navbar-default {
+	background: #fafefe;
+	border-color: #fafefe;
+	background-image: none;
+}
+.navbar-default .navbar-brand {
+	color: #a5ba50;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  	color: #343434;
+}
+.navbar-default .navbar-text {
+  	color: #343434;
+}
+.navbar-default .navbar-nav > li > a {
+  	color: #343434;
+  	font-family: Oswald;
+  	font-weight: 400;
+  	text-transform: uppercase;
+  	border-bottom: 4px solid transparent;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  	color: #a5ba50;
+  	border-bottom: 4px solid #a5ba50;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #343434;
+	background-color: #343434;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  	color: #343434;
+  	background-color: #343434;
+}
+.navbar-default .navbar-toggle {
+  	border-color: #a5ba50;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  	background-color: #343434;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  	background-color: #343434;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  	border-color: #343434;
+}
+.navbar-default .navbar-link {
+  	color: #343434;
+}
+.navbar-default .navbar-link:hover {
+  	color: #343434;
+}
+
+/*FIXED FOOTER*/
+.footer {
+  	position: absolute;
+  	background-color: #fafefe;
+  	box-shadow: 0 -1px 1px #8f8f8f;
+  	bottom: 0;
+  	width: 100%;
+  	height: 60px;
+	z-index: 999;
+}
+footer {
+	position: fixed;
+	background: #fafefe;
+	height: 70px;
+	width: 100%;
+	line-height: 23px;
+	text-align: center;
+	margin: 0;
+	padding-top: 1.5em;	
+	bottom: 0;  
+	left: 0;
+	box-shadow: 0 -1px 1px #8f8f8f;
+	overflow-x: hidden;
+}
+footer p, footer a {
+	font-family: Oswald;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 15px;
+	padding: 0 10px 0 10px;
+	display: inline;
+}
+footer p {
+	color: #343434;
+	font-weight: 400;
+}
+footer a {
+	color: #8f8f8f;
+	font-weight: 300;
+}
+footer a:hover {
+	color: #a5ba50;
+	text-shadow: inset 0 0 8px 0 red;
+	-moz-transition:all 0.25s ease;
+	-webkit-transition:all 0.25s ease;
+	-o-transition:all 0.25s ease;
+	transition:all 0.25s ease;
+	text-decoration: none;		
+}
+.fa {
+	font-size: 14px;
+	color: #000000;
+	margin-right: 0.25em;
+}
+#email {
+	margin-right: -3.25em;
+}
+#byline {position: absolute;
+	font-family: Open Sans Condensed;
+	font-size: 10px;
+	color: #343434;
+	text-align: center;
+	line-height: 18px;
+	bottom: 0;
+	right: 5px;
+}
+
+/*MAIN CONTENT*/
+.section{
+	/*FOR DEBUGGING*/
+	/*outline: 1px solid #cccccc;*/
+}
+.section .wrapper {
+	height: 50%;
+	width: 73.5%;
+	margin: 0 auto;
+	padding: 0 auto;
+
+	/*FOR DEBUGGING*/
+	/*outline: 1px solid #cccccc;*/
+}
+
+/*ARROW ANIMATION*/
+.vertpan img {
+	margin-bottom: 5px;
+	-webkit-transition: margin 1s ease;
+	-moz-transition: margin 1s ease;
+	-o-transition: margin 1s ease;
+	-ms-transition: margin 1s ease;
+  	transition: margin 1s ease;
+}
+.vertpan img:hover {
+		margin-bottom: -25px;
+}	
+
+/*1.0 INTRO PAGE*/
+#intro {
+	position: relative;
+}
+#intro h1, #accentLarge {
+	font-family: Oswald;
+	font-size: 70px;
+	font-weight: 400;
+	line-height: 30px;			
+}
+#intro h1 {
+	color: #000000;
+}
+introText {
+	position: absolute;
+	right: 15%;
+	bottom: 35%;
+}
+#accentLarge {
+	color: #a5ba50;
+}
+#accentSmall {
+	position: absolute;
+	font-family: Oswald;
+	font-size: 24px;
+	font-weight: 400;
+	color: #000000;
+	right: 20%;
+	bottom: 27.5%;
+}
+#arrowDown1 {
+	position: absolute;
+	height: 70px; 			
+	width: 50px;
+	right: 15%;
+	bottom: 22.5%;
+}
+
+/*2.0 ABOUT*/
+#sec2 {
+	position: relative;
+}
+.bio {
+	font-family: Open Sans Condensed;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	text-align: justify;
+}
+#toolbox {
+	position: relative;
+	height: 125px;
+	width: 940px;
+	text-align: center;
+	border-top: 2px solid #f6f6f6;
+}
+.skill {
+	background: #a5ba50;
+	height: 30px; 
+	width: 150px;
+	font-family: Open Sans Condensed;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fafefe;
+	text-align: center;
+	border-radius: 50px;
+	margin: 10px;
+	display: inline-block;
+}
+#comment {
+	position: absolute;
+	font-family: Oswald;
+	font-size: 12px;
+	font-weight: 400;
+	color: #000000;
+	right: 10%;
+	bottom: 30%
+}
+#arrowDown2 {
+	position: absolute;
+	height: 70; 			
+	width: 50;
+	right: 6%;
+	bottom: 25%;
+}
+
+/*3.0 PROJECTS*/
+#sec3 {
+	position: relative;
+}
+#gallery {
+	height: 300px;
+	width: 940px;
+	font-family: Oswald;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+.project {
+	position: relative;
+	background: #a5ba50;
+	height: 290px; 
+	width: 250px;
+	font-family: Open Sans Condensed;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fafefe;
+	text-align: center;
+	outline: 2px solid transparent;
+	padding: 1em;
+	margin: 0 0.1em 0 0.1em;
+	display: inline-block;
+	overflow: hidden;
+}
+.project:hover {
+	outline: 2px solid #343434;
+	-moz-transition:all 0.25s ease;
+	-webkit-transition:all 0.25s ease;
+	-o-transition:all 0.25s ease;
+	transition:all 0.25s ease;		
+}
+.projDescription {
+	position: absolute;
+	height: 350px; 
+	width: 250px;
+	font-family: Open Sans Condensed;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fafefe;
+	text-align: center;
+	padding: 1em;
+	margin: 0 0.1em 0 0.1em;
+	display: inline-block;
+}

@@ -1,406 +1,165 @@
-<html>
+<html xlang="en">
 
-<!--CONTENT
-	1.0: INTRO PAGE
-	2.0: BIO/ABOUT
-	3.0: PROJECTS
--->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Evelyn Sham | Portfolio</title>
+	<meta name="author" content="Evelyn Sham" />
+	<meta name="description" content="Evelyn Sham - Portfolio" />
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 	<style>
-		/*Reset page and body margins*/
-		body {background: #fafefe;
-			margin: 0;
-			padding:0;
-			/*overflow-x: hidden;*/ 
-		}
-
-		/*General Font Styling*/
-
-		h1, h2, h3 {font-family: Oswald;
-			color: #000000;
-		}
-	
-		h1 {font-size: 50px;
-			font-weight: 300;
-		}
-
-		h2 {font-size: 30px;
-			font-weight: 400;
-			line-height: 2px;
-		}
-		
-		h3 {font-size: 20px;
-			font-weight: 300;
-			line-height: 16px;
-		}
-		
-		p {font-family: Open Sans Condensed;
-			font-size: 18px;
-			color: #000000;
-		}
-		
-		/*FIXED HEADER*/
-		header {position: fixed;
-			background: #fafefe;
-			height: 60px;
-			width: 100%;
-			text-align: left;
-			list-style: none;  
-			top:0;
-			left:0;
-			z-index: 2;
-			overflow: hidden;
-
-			/*FOR DEBUGGING*/
-			/*border: 1px solid #cccccc;*/ 
-		}
-
-		header ul {padding: 0px 30px 0px 30px;
-		}
-
-		header li {margin: 0;
-			padding: 10px;			
-			display: inline;
-		}
-
-		header li a {position: relative;
-			text-decoration: none;
-			font-family: 'Oswald';
-    		font-weight: 400;
-			font-size: 14px;
-			color: #8f8f8f;
-			text-align: center;
-			text-transform: uppercase;
-			border-bottom: 2px solid #fafefe;			
-			padding: 0px 10px 0 10px;
-			overflow-x: hidden;
-			display: inline;
-		}
-
-		header li a:hover {color: #343434;
-			text-shadow:inset 0 0 8px 0 red;
-			border-bottom-color: #343434;
-			-moz-transition:all 0.25s ease;
-			-webkit-transition:all 0.25s ease;
-			-o-transition:all 0.25s ease;
-			transition:all 0.25s ease;		
-		}
-
-		/*MAIN CONTENT*/
-		/*GENERAL FORMATTING*/
-		.section {height: 100%;
-			width: 100%;
-			padding: 80px 0 80px 0;
-			overflow-x: hidden;
-
-			/*FOR DEBUGGING*/
-			/*border-top: 1px solid #000000;
-			border-bottom: 1px solid #000000;*/
-		}	
-
-		/*1.0 INTRO PAGE*/
-		#intro {position: relative;
-		}
-
-
-		#intro h1, #accentLarge {font-family: Oswald;
-			font-size: 70px;
-			font-weight: 400;
-			line-height: 30px;			
-		}
-
-		#intro h1 {color: #000000;
-		}
-
-		#introContainer {position: relative;
-			height: 70%;
-			width: 100%;
-
-			/*FOR DEBUGGING*/
-			/*border: 1px solid #cccccc;*/
-		}
-
-		introText {position: absolute;
-			right: 22.5%;
-			bottom: 20%;
-		}
-
-		#accentLarge {color: #a5ba50;
-		}
-
-		#accentSmall {position: absolute;
+		body {
 			font-family: Oswald;
-			font-size: 24px;
-			font-weight: 400;
-			color: #000000;
-			right: 25%;
-			bottom: 15%;
 		}
-
-		#arrowDown1 {position: absolute;
-			height: 70px; 			
-			width: 50px;
-			right: 20%;
-			bottom: 5%;
-		}
-
-		/*2.0 BIO/ABOUT*/
-		#sec2 {position: relative;
-		}
-
-		#bioContainer {height: 50%;
-			width: 75%;
-			margin: 15% auto;
-
-			/*FOR DEBUGGING*/
-			/*border: 1px solid #cccccc;*/
-		}
-
-		.bio {font-family: Open Sans Condensed;
-			font-size: 20px;
-			font-weight: 300;
-			color: #000000;
-			text-align: justify;
-		}
-
-		#toolbox {position: relative;
-			height: 125px;
-			width: 940px;
-			text-align: center;
-			border-top: 2px solid #f6f6f6;
-		}
-
-		.skill {background: #a5ba50;
-			height: 30px; 
-    		width: 150px;
-			font-family: Open Sans Condensed;
-			font-size: 20px;
-			font-weight: 400;
-			color: #fafefe;
-			text-align: center;
-			border-radius: 50px;
-			margin: 10px;
-			display: inline-block;
-		}
-
-		#comment {position: absolute;
+		/* Style for our header texts
+		* --------------------------------------- */
+		h1{
+			font-size: 5em;
 			font-family: Oswald;
-			font-size: 12px;
-			font-weight: 400;
-			color: #000000;
-			right: 20%;
-			bottom: 35%;
-		}
-
-		#arrowDown2 {position: absolute;
-			height: 70; 			
-			width: 50;
-			right: 15%;
-			bottom: 30%;
-		}
-		/*3.0 PROJECTS*/
-		#sec3 {position: relative;
-		}
-
-		#projContainer {height: 50%;
-			width: 75%;
-			margin: 15% auto;
-
-			/*FOR DEBUGGING*/
-			/*border: 1px solid #cccccc;*/
-		}
-
-		#gallery {height: 300px;
-			width: 940;
-			font-family: Oswald;
-			overflow-x: scroll;
-			overflow-y: hidden;
-			white-space: nowrap;
-		}
-
-		.project {position: relative;
-			background: #a5ba50;
-			height: 290px; 
-    		width: 250px;
-			font-family: Open Sans Condensed;
-			font-size: 20px;
-			font-weight: 400;
-			color: #fafefe;
-			text-align: center;
-			outline: 2px solid transparent;
-			padding: 1em;
-			margin: 0 0.1em 0 0.1em;
-			display: inline-block;
-		}
-
-		.project:hover {outline: 2px solid #343434;
-			-moz-transition:all 0.25s ease;
-			-webkit-transition:all 0.25s ease;
-			-o-transition:all 0.25s ease;
-			transition:all 0.25s ease;		
-		}
-
-		.projDescription {position: absolute;
-			height: 350px; 
-    		width: 250px;
-			font-family: Open Sans Condensed;
-			font-size: 20px;
-			font-weight: 400;
-			color: #fafefe;
-			text-align: center;
-			padding: 1em;
-			margin: 0 0.1em 0 0.1em;
-			display: inline-block;
-		}
-
-		/*ARROW ANIMATION*/
-		.vertpan img {margin-bottom: 5px;
-  			-webkit-transition: margin 1s ease;
-     		-moz-transition: margin 1s ease;
-       		-o-transition: margin 1s ease;
-      		-ms-transition: margin 1s ease;
-          	transition: margin 1s ease;
-		}
- 
-		.vertpan img:hover {
-  			margin-bottom: -25px;
-		}
-	
-		/*FIXED FOOTER*/
-		footer {position: fixed;
-			background: #fafefe;
-			height: 70px;
-			width: 100%;
-			line-height: 23px;
-			text-align: center;
-			margin: 0;
-			padding: 0;	
-			bottom: 0;  
-			left: 0;
-			box-shadow: 0 -1px 1px #8f8f8f;
-			z-index: 2;
-			overflow-x: hidden;
-		}
-		
-		footer p, footer a {font-family: Oswald;
-			font-size: 14px;
-			text-decoration: none;
-			text-transform: uppercase;
-			margin: 15px;
-			padding: 0 10px 0 10px;
-			display: inline;
-		}
-
-		footer p {color: #343434;
-			font-weight: 400;
-		}
-
-		footer a {color: #8f8f8f;
-			font-weight: 300;
-		}
-
-		footer a:hover {color: #343434;
-			text-shadow:inset 0 0 8px 0 red;
-			-moz-transition:all 0.25s ease;
-			-webkit-transition:all 0.25s ease;
-			-o-transition:all 0.25s ease;
-			transition:all 0.25s ease;		
-		}
-		
-		#byline {position: absolute;
-			font-family: Open Sans Condensed;
-			font-size: 10px;
 			color: #343434;
-			text-align: center;
-			line-height: 18px;
-			bottom: 0;
-			right: 5px;
+			margin:0;
+			padding:0;
 		}
 	</style>
 
-	<!--Webpage Title & Font Imports-->
-	<head>
-		<title>Evelyn Sham | Portfolio</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-		
-		<!--GOOGLE ANALYTICS-->
-		<script src="script.js"></script>	
-	</head>
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>	
+	
+	<!-- BOOTSTRAP -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
 
-	<!--Page Content-->
-	<body>
-		<!--START: Fixed Header-->
-		<header>
-			<ul>
-				<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="24px" width="24px"></a></li
-				><li><a href="#About">About</a></li
-				><li><a href="#Projects">Projects</a></li>
-			</ul>			
-		</header>
-		<!--END: Fixed Header-->
+	<!-- IE WINDOWS 8 WORKAROUND -->
+	<script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
 
-		<!--START: Content-->
-		<!--1.0: INTRO-->	
-		<a name="Top"></a>
-		<div class="section" id="intro">
-			<div id="introContainer">
-				<introText>
-					<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
-				</introText>	
-					<span id="accentSmall">Allow me to introduce myself</span>
-					<a href="#About" class="vertpan"><img id="arrowDown1" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>	
+	<!-- ANALYTICS -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- SMOOTH SCROLLING JAVASCRIPT INTIALIZATION -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['Top', 'About', 'Projects'],
+				sectionsColor: ['#fafefe', '#fafefe', '#fafefe'],
+				css3: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    	<div class="container">
+        	<div id="navbar" class="collapse navbar-collapse">
+	          	<ul class="nav navbar-nav">
+	          		<li><a href="#Top"><img src="https://cloud.githubusercontent.com/assets/5613067/7100408/79e3d2fc-dfee-11e4-953f-4ab11e3252af.png" height="20px" width="20px"></a></li>
+		            <li><a href="#About">About</a></li>
+		            <li><a href="#Projects">Projects</a></li>
+	          	</ul>
+        	</div>
+      	</div>
+    </nav>
+
+<footer class="footer">
+  	<div class="container">
+		<p>CONTACT ME:</p>
+		<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><i class="fa fa-linkedin"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px"> -->     LINKEDIN</a>
+		<a href="http://www.github.com/sevln" target="_blank"><i class="fa fa-github-alt"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="14px" width="14px"> -->     GITHUB</a>
+		<a><i class="fa fa-envelope" id="email"></i>
+			<script type="text/javascript">
+			/*Protected email script by Joe Maller. JavaScripts available at http://www.joemaller.com.*/
+				emailE=('evelyn.sham@' + 'mail.utoronto.ca')
+				document.write('<A href="mailto:' + emailE + '">' + emailE + '</a>')
+			</script>
+		</a>
+		<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>
+  	</div>
+</footer>
+
+<div id="fullpage">
+	<div class="section">
+		<introText>
+			<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
+		</introText>	
+		<span id="accentSmall">Allow me to introduce myself</span>
+		<a href="#About" class="vertpan"><img id="arrowDown1" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+	</div>
+
+	<div class="section" id="sec2">
+		<div class="wrapper">
+			<h2>BIO</h2>
+			</br>
+			<h3>NAME: <span class="bio">Evelyn Sham</span></h3>
+			<h3>EDUCATION: <span class="bio">BASc. in Industrial Engineering (3rd Year) with Bioengineering minor, University of Toronto</span></h3>
+			<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
+			<div id="toolbox">
+				<h3>TECHNICAL SKILLS</h3>
+				<span class="skill">Java</span>
+				<span class="skill">HTML/CSS/Bootstrap</span>		
+				<span class="skill">SQL</span>						
+				<span class="skill">Photoshop</span>
+				<span class="skill">MatLab</span>
 			</div>
-			
 		</div>
+		<span id="comment">Take a look at what</br>I've been working on</span>
+		<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+	</div>
 
-		<!--2.0: BIO/ABOUT-->
-		<a name="About"></a>
-		<div class="section" id="sec2">
-			<div id="bioContainer">
-				<h2>BIO</h2>
-						</br>
-						<h3>NAME: <span class="bio">Evelyn Sham</span></h3>
-						<h3>EDUCATION: <span class="bio">BASc. in Industrial Engineering (3rd Year) with Bioengineering minor, University of Toronto</span></h3>
-						<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
-						<div id="toolbox">
-							<h3>TECHNICAL SKILLS</h3>
-							<span class="skill">Java</span>
-							<span class="skill">HTML/CSS</span>		
-							<span class="skill">SQL</span>						
-							<span class="skill">Photoshop</span>
-							<span class="skill">MatLab</span>
-						</div>
-						<span id="comment">Take a look at what</br>I've been working on</span>
-						<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
-			</div>			
-		</div>
-
-		<!--3.0: PROJECTS-->
-		<a name="Projects"></a>
-		<div class="section" id="sec3">
-			<div id="projContainer">
-					<h2>PROJECTS</h2>
-					</br>
-					<p>Click on a project to visit its project page:</p>
-					<div id="gallery">
+	<div class="section" id="sec3">
+		<div class="wrapper">
+			<!-- <h2>PROJECTS</h2>
+			</br>
+			<p>Click on a project to visit its project page:</p>
+			<div id="myCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol> -->
+				<!-- Carousel items -->
+				<!-- <div class="carousel-inner">
+					<div class="active item">
 						<a href="https://github.com/timmui/PhantPower" target="_blank"><div class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</div></a>
+					</div>
+					<div class="item">
 						<a href="" target="_blank"><div class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</div></a>
+					</div>
+					<div class="item">
 						<a href="https://github.com/MIE350-Project/MIE350" target="_blank"><div class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</div></a>
+					</div>
+					<div class="item">
 						<a href="https://github.com/sevln/MIE335" target="_blank"><div class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic Programming Solver</div></a>
+					</div>
+					<div class="item">
 						<a href="" target="_blank"><div class="project" alt="MIE240 Course Deliverable: Ontario Renal Network Website Redesign">ORN Website Redesign</div>
-					</div>		
+					</div>
+				</div> -->
+				<!-- Carousel nav -->
+				<!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div> -->
+			<h2>PROJECTS</h2>
+			</br>
+			<p>Click on a project to visit its project page:</p>
+			<div id="gallery">
+				<a href="https://github.com/timmui/PhantPower" target="_blank"><div class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</div></a>
+				<a href="" target="_blank"><div class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</div></a>
+				<a href="https://github.com/MIE350-Project/MIE350" target="_blank"><div class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</div></a>
+				<a href="https://github.com/sevln/MIE335" target="_blank"><div class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic</br>Programming Solver</div></a>
+				<a href="" target="_blank"><div class="project" alt="MIE240 Course Deliverable: Ontario Renal Network Website Redesign">ORN Website Redesign</div>
 			</div>
-		</div>		
-		<!--END: Content-->
+		</div>
+	</div>
+</div>
 
-		<!--START: Fixed Footer-->
-			<footer>
-				</br>
-				<p>CONTACT ME:</p>
-				<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px">     LINKEDIN</a>
-				<a href="http://www.github.com/sevln" target="_blank"><img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="12px" width="12px">     GITHUB</a>
-				<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>	
-			</footer>
-		<!--END: Fixed Footer-->
-	</body>
+
+</body>
 </html>
