@@ -290,14 +290,15 @@ introText {
 .skill {
 	background: #a5ba50;
 	height: 30px; 
-	width: 150px;
+	width: 160px;
 	font-family: Open Sans Condensed;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #fafefe;
 	text-align: center;
 	border-radius: 50px;
-	margin: 10px;
+	margin: 5px 10px 5px 10px;
+	padding: auto;
 	display: inline-block;
 }
 #comment {
