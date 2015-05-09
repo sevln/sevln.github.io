@@ -209,8 +209,11 @@ footer a:hover {
 	/*outline: 1px solid #cccccc;*/
 }
 .section .wrapper {
-	height: 50%;
-	width: 73.5%;
+	position: absolute;
+	height: 52.5%;
+	width: 70%;
+	top: 20%;
+	left: 15%;
 	margin: 0 auto;
 	padding: 0 auto;
 
@@ -269,6 +272,63 @@ introText {
 	bottom: 22.5%;
 }
 
+/*Arrow animation on load*/
+.blink-arrow {
+	-webkit-animation: blink 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 2.5s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 2.5s;
+    -o-animation-iteration-count: infinite;
+    -ms-animation: blink 2.5s;
+    -ms-animation-iteration-count: infinite;
+}
+	/*Arrow animation keyframes*/
+	@-webkit-keyframes blink {
+	    0% {
+	    	opacity: 1;
+	    }
+	    50% {
+	        opacity: 0;
+	    }
+	    100% {
+	        opacity: 1;
+	    }
+	}
+	@-moz-keyframes blink {
+	    0% {
+	        opacity: 1;
+	    }
+	    50% {
+	        opacity: 0;
+	    }
+	    100% {
+	        opacity: 1;
+	    }
+	}
+	@-o-keyframes blink {
+	    0% {
+	        opacity: 1;
+	    }
+	    50% {
+	        opacity: 0;
+	    }
+	    100% {
+	        opacity: 1;
+	    }
+	}
+	@-ms-keyframes blink {
+	    0% {
+	        opacity: 1;
+	    }
+	    50% {
+	        opacity: 0;
+	    }
+	    100% {
+	        opacity: 1;
+	    }
+	}
+
 /*2.0 ABOUT*/
 #sec2 {
 	position: relative;
@@ -287,17 +347,22 @@ introText {
 	text-align: center;
 	border-top: 2px solid #f6f6f6;
 }
+.row {
+	height: 35px;
+	width: 920px; 
+}
 .skill {
 	background: #a5ba50;
 	height: 30px; 
-	width: 150px;
+	width: 160px;
 	font-family: Open Sans Condensed;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #fafefe;
 	text-align: center;
 	border-radius: 50px;
-	margin: 10px;
+	margin: 5px 10px 5px 10px;
+	padding: auto;
 	display: inline-block;
 }
 #comment {
@@ -306,14 +371,14 @@ introText {
 	font-size: 12px;
 	font-weight: 400;
 	color: #000000;
-	right: 10%;
+	right: 15%;
 	bottom: 30%
 }
 #arrowDown2 {
 	position: absolute;
 	height: 70; 			
 	width: 50;
-	right: 6%;
+	right: 10%;
 	bottom: 25%;
 }
 
@@ -321,47 +386,85 @@ introText {
 #sec3 {
 	position: relative;
 }
-#gallery {
-	height: 300px;
-	width: 940px;
-	font-family: Oswald;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-}
-.project {
-	position: relative;
-	background: #a5ba50;
-	height: 290px; 
-	width: 250px;
-	font-family: Open Sans Condensed;
-	font-size: 20px;
-	font-weight: 400;
-	color: #fafefe;
-	text-align: center;
-	outline: 2px solid transparent;
-	padding: 1em;
-	margin: 0 0.1em 0 0.1em;
-	display: inline-block;
-	overflow: hidden;
-}
-.project:hover {
-	outline: 2px solid #343434;
-	-moz-transition:all 0.25s ease;
-	-webkit-transition:all 0.25s ease;
-	-o-transition:all 0.25s ease;
-	transition:all 0.25s ease;		
-}
-.projDescription {
+.sec3TextH {
 	position: absolute;
-	height: 350px; 
-	width: 250px;
-	font-family: Open Sans Condensed;
-	font-size: 20px;
-	font-weight: 400;
+	color: #ffffff;
+	top: 80px;
+	left: 160px;
+	z-index: 999;
+}
+.sec3Textp {
+	position: absolute;
+	color: #ffffff;
+	top: 140px;
+	left: 160px;
+	z-index: 999;
+}
+.carousel-inner a:link {
+	text-decoration: none;
+}
+.carousel-inner h2 {
+    font-family: Oswald; 
+    font-size: 26px;
+    font-weight: 300;
+    color: #fafafa;      
+}
+.project, .coming-soon {
+	height: 200px;
+}
+.project .fa {
+	margin: 20px;
 	color: #fafefe;
-	text-align: center;
-	padding: 1em;
-	margin: 0 0.1em 0 0.1em;
-	display: inline-block;
+	font-size: 100px;
+}
+.coming-soon .fa {
+	margin: 10px;
+	color: #fafefe;
+	font-size: 100px;
+}
+.project:hover >h2,
+.project:hover >.fa {
+	color: #a5ba50;
+} 
+.coming-soon p {
+	color: transparent;
+	font-size: 20px;
+	font-weight: 700;
+}
+.coming-soon:hover >p {
+	color: #a5ba50;
+}
+.carousel-caption {
+	height: 100px;
+	margin-bottom: 15px;
+}
+.carousel-caption h3, .carousel-caption p {
+	color: #fafefe;
+	font-weight: 300;
+}
+.carousel-caption h3 {
+	font-size: 22px;
+}
+.carousel-caption p {
+	font-size: 18px;
+}
+.carousel {
+	background: #343434;
+}
+.item{
+    background: #333333;    
+    text-align: center;
+    height: 300px;
+}
+.carousel-control {
+	padding-top: 25%;
+}
+.carousel-control:hover >.glyphicon-arrow-left {
+	color: #a5ba50;
+}
+.carousel-control:hover >.glyphicon-arrow-right {
+	color: #a5ba50;
+}
+.carousel-indicators {
+	padding-bottom: 125px;
 }

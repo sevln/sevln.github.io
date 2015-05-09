@@ -7,26 +7,30 @@
 	<meta name="description" content="Evelyn Sham - Portfolio" />
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
-	<link rel="stylesheet" type="text/css" href="css/custom.css" />
 	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 	<style>
+		/*General page formatting*/
 		body {
 			font-family: Oswald;
 		}
-		/* Style for our header texts
-		* --------------------------------------- */
 		h1{
 			font-size: 5em;
 			font-family: Oswald;
 			color: #343434;
 			margin:0;
 			padding:0;
+		}
+		
+		/*Colouring for carousel slide indicators*/
+		.carousel-indicators .active {
+			background-color: #a5ba50;
 		}
 	</style>
 
@@ -44,15 +48,7 @@
 	<script type="text/javascript" src="js/script.js"></script>
 
 	<!-- SMOOTH SCROLLING JAVASCRIPT INTIALIZATION -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['Top', 'About', 'Projects'],
-				sectionsColor: ['#fafefe', '#fafefe', '#fafefe'],
-				css3: true
-			});
-		});
-	</script>
+	<script type="text/javascript" src="js/start-fullpage.js"></script>
 </head>
 <body>
 	<!-- Fixed navbar -->
@@ -68,98 +64,156 @@
       	</div>
     </nav>
 
-<footer class="footer">
-  	<div class="container">
-		<p>CONTACT ME:</p>
-		<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><i class="fa fa-linkedin"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px"> -->     LINKEDIN</a>
-		<a href="http://www.github.com/sevln" target="_blank"><i class="fa fa-github-alt"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="14px" width="14px"> -->     GITHUB</a>
-		<a><i class="fa fa-envelope" id="email"></i>
-			<script type="text/javascript">
-			/*Protected email script by Joe Maller. JavaScripts available at http://www.joemaller.com.*/
-				emailE=('evelyn.sham@' + 'mail.utoronto.ca')
-				document.write('<A href="mailto:' + emailE + '">' + emailE + '</a>')
-			</script>
-		</a>
-		<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>
-  	</div>
-</footer>
+	<footer class="footer">
+	  	<div class="container">
+			<p>CONTACT ME:</p>
+			<a href="https://ca.linkedin.com/in/evelynsham" target="_blank"><i class="fa fa-linkedin"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100216/90696a62-dfe1-11e4-8969-677c1a38ad15.png" height="12px" width="14px"> -->     LINKEDIN</a>
+			<a href="http://www.github.com/sevln" target="_blank"><i class="fa fa-github-alt"></i><!-- <img src="https://cloud.githubusercontent.com/assets/5613067/7100220/b1d27dba-dfe1-11e4-843b-507308d216d7.png" height="14px" width="14px"> -->     GITHUB</a>
+			<a><i class="fa fa-envelope" id="email"></i>
+				<script type="text/javascript" src="js/email.js"></script>
+			</a>
+			<span id="byline">WEBSITE by EVELYN SHAM | 2015</span>
+	  	</div>
+	</footer>
 
-<div id="fullpage">
-	<div class="section">
-		<introText>
-			<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
-		</introText>	
-		<span id="accentSmall">Allow me to introduce myself</span>
-		<a href="#About" class="vertpan"><img id="arrowDown1" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
-	</div>
-
-	<div class="section" id="sec2">
-		<div class="wrapper">
-			<h2>BIO</h2>
-			</br>
-			<h3>NAME: <span class="bio">Evelyn Sham</span></h3>
-			<h3>EDUCATION: <span class="bio">BASc. in Industrial Engineering (3rd Year) with Bioengineering minor, University of Toronto</span></h3>
-			<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
-			<div id="toolbox">
-				<h3>TECHNICAL SKILLS</h3>
-				<span class="skill">Java</span>
-				<span class="skill">HTML/CSS/Bootstrap</span>		
-				<span class="skill">SQL</span>						
-				<span class="skill">Photoshop</span>
-				<span class="skill">MatLab</span>
-			</div>
+	<div id="fullpage">
+		<div class="section">
+			<introText>
+				<h1>Hi, my name is <span id="accentLarge">Evelyn Sham</span>.</h1>
+			</introText>	
+			<span id="accentSmall">Allow me to introduce myself</span>
+			<a href="#About" class="vertpan"><img id="arrowDown1" class="blink-arrow" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
 		</div>
-		<span id="comment">Take a look at what</br>I've been working on</span>
-		<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
-	</div>
 
-	<div class="section" id="sec3">
-		<div class="wrapper">
-			<!-- <h2>PROJECTS</h2>
+		<div class="section" id="sec2">
+			<div class="wrapper">
+				<h2>BIO</h2>
+				</br>
+				<h3>NAME: <span class="bio">Evelyn Sham</span></h3>
+				<h3>EDUCATION: <span class="bio">BASc. in Industrial Engineering (3rd Year) with Bioengineering minor, University of Toronto</span></h3>
+				<h3>INTERESTS: <span class="bio">Human Factors, Biomedical Technologies, Rehabiitation Engineering</h3>
+				<div id="toolbox">
+					<h3>TECHNICAL SKILLS</h3>
+					<div class="row">
+						<span class="skill">C</span>
+						<span class="skill">Java</span>
+						<span class="skill">HTML/CSS/Bootstrap</span>		
+						<span class="skill">SQL</span>
+					</div>
+					<div class="row">
+						<span class="skill">Relational Data Modelling</span>
+						<span class="skill">Wireframing/Mockups</span>
+						<span class="skill">Photoshop</span>
+						<span class="skill">MatLab</span>
+					</div>	
+				</div>
+			</div>
+			<span id="comment">Take a look at what</br>I've been working on</span>
+			<a href="#Projects" class="vertpan"><img id="arrowDown2" src="https://cloud.githubusercontent.com/assets/5613067/7099769/e705df9c-dfcb-11e4-9d67-f40c02add4e5.png"></a>
+		</div>
+
+		<div class="section" id="sec3">
+			<h2 class="sec3TextH">PROJECTS</h2>
 			</br>
-			<p>Click on a project to visit its project page:</p>
-			<div id="myCarousel" class="carousel slide">
+			<p class="sec3Textp">Click on a project to visit its project page:</p>
+
+			<div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
 				<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				</ol> -->
-				<!-- Carousel items -->
-				<!-- <div class="carousel-inner">
-					<div class="active item">
-						<a href="https://github.com/timmui/PhantPower" target="_blank"><div class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</div></a>
-					</div>
-					<div class="item">
-						<a href="" target="_blank"><div class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</div></a>
-					</div>
-					<div class="item">
-						<a href="https://github.com/MIE350-Project/MIE350" target="_blank"><div class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</div></a>
-					</div>
-					<div class="item">
-						<a href="https://github.com/sevln/MIE335" target="_blank"><div class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic Programming Solver</div></a>
-					</div>
-					<div class="item">
-						<a href="" target="_blank"><div class="project" alt="MIE240 Course Deliverable: Ontario Renal Network Website Redesign">ORN Website Redesign</div>
-					</div>
-				</div> -->
-				<!-- Carousel nav -->
-				<!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			</div> -->
-			<h2>PROJECTS</h2>
-			</br>
-			<p>Click on a project to visit its project page:</p>
-			<div id="gallery">
-				<a href="https://github.com/timmui/PhantPower" target="_blank"><div class="project" alt="UofT Hacks 2015 Hackathon Entry: Phantpower Smart Outlet">PhantPower Smart Outlet</div></a>
-				<a href="" target="_blank"><div class="project" alt="MIE344 Course Deliverable: miPHR">miPHR</div></a>
-				<a href="https://github.com/MIE350-Project/MIE350" target="_blank"><div class="project" alt="MIE350 Course Deliverable: miRoommate Finder">miRoommate Finder</div></a>
-				<a href="https://github.com/sevln/MIE335" target="_blank"><div class="project" alt="MIE335 Course Deliverable: Hildreth Quadratic Programming Solver">Hildreth Quadratic</br>Programming Solver</div></a>
-				<a href="" target="_blank"><div class="project" alt="MIE240 Course Deliverable: Ontario Renal Network Website Redesign">ORN Website Redesign</div>
+		            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		            <li data-target="#myCarousel" data-slide-to="1"></li>
+		            <li data-target="#myCarousel" data-slide-to="2"></li>
+		            <li data-target="#myCarousel" data-slide-to="3"></li>
+		            <li data-target="#myCarousel" data-slide-to="4"></li>
+		            <li data-target="#myCarousel" data-slide-to="5"></li>
+		        </ol>
+
+		        <div class="carousel-inner">
+		            <div class="active item">
+		               	<a href="https://github.com/timmui/PhantPower" target="_blank">
+			               	<div class="project">               		
+		                		<h2>PHANTPOWER SMART OUTLET</h2>
+		                		<i class="fa fa-bolt"></i>
+		                	</div>				            
+		                </a> 	
+		                <div class="carousel-caption">
+		                  <h3>UofT Hacks 2015 Hackathon Entry</h3>
+		                  <p >Smart power outlet tackling the phenomenon of "Phantom Power" that can be controlled using Android, PC, and the Thalmic Myo band.</p>
+		                </div>			    
+		            </div>
+		            <div class="item">
+		                <a href="https://github.com/MIE350-Project/MIE350" target="_blank">
+			               	<div class="project">               		
+		                		<h2>miROOMMATE FINDER</h2>
+		                		<i class="fa fa-users"></i>
+		                	</div>				            
+		                </a>
+		                <div class="carousel-caption">
+		                  <h3>MIE350: Design & Analysis of Information Systems Project</h3>
+		                  <p>Online database with combined room and roommate search tool aimed to help university students find the perfect place to rent.</p>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <!-- <a href="" target="_blank"> -->
+			               	<div class="coming-soon">               		
+		                		<h2>miPHR</h2>
+		                		<p>This project page is in the works. Feel free to contact me. I'd love to tell you more about it!</p>
+		                		<i class="fa fa-medkit"></i>
+		                	</div>				            
+		                <!-- </a> -->
+		                <div class="carousel-caption">
+		                  <h3>MIE344: Ergonomic Design of Information Systems Project</h3>
+		                  <p>UI and UX design of a mobile healthcare application to store personal healthcare information.</p>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <a href="https://github.com/sevln/MIE335" target="_blank">
+			               	<div class="project">               		
+		                		<h2>Hildreth Quadratic Program Solver</h2>
+		                		<i class="fa fa-calculator"></i>
+		                	</div>				            
+		                </a>
+		                <div class="carousel-caption">
+		                  <h3>MIE335: Algorithms & Numerical Methods Project</h3>
+		                  <p>Quadratic program solver using the Hildreth algorithm.</p>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <!-- <a href="" target="_blank"> -->
+			               	<div class="coming-soon">               		
+		                		<h2>Ontario Renal Network Website Redesign</h2>
+		                		<p>This project page is in the works. Feel free to contact me. I'd love to tell you more about it!</p>
+		                		<i class="fa fa-refresh"></i>
+		                	</div>				            
+		                <!-- </a> -->
+		                <div class="carousel-caption">
+		                  <h3>MIE240: Human Centred Systems Design Project</h3>
+		                  <p>UI and UX redesign for the Ontario Renal Network website to improve display of renal health statistics to the public.</p>
+		                </div>
+		            </div>
+		         	<div class="item">
+		                <!-- <a href="" target="_blank"> -->
+			               	<div class="coming-soon">               		
+		                		<h2>Repair Shop Operation Simulation</h2>
+		                		<p>This project page is in the works. Feel free to contact me. I'd love to tell you more about it!</p>
+		                		<i class="fa fa-wrench"></i>
+		                	</div>				            
+		                <!-- </a> -->
+		                <div class="carousel-caption">
+		                  <h3>MIE360: Systems Modelling and Simulation</h3>
+		                  <p>Simulation modelling the operation of a repair shop including variables such as customer arrival times, service times, and resource depletion.</p>
+		                </div>
+		            </div>
+		        </div>
+
+		        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+		            <span class="glyphicon glyphicon-arrow-left"></span>
+		        </a>
+		        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+		            <span class="glyphicon glyphicon-arrow-right"></span>
+		        </a>
+
 			</div>
 		</div>
 	</div>
-</div>
-
-
 </body>
 </html>
